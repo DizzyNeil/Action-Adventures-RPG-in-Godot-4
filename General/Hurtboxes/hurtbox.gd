@@ -7,5 +7,5 @@ func _ready() -> void:
 
 func AreaEntered( a : Area2D ) -> void:
 	if a is HitBox:
-		a.TakeDamage( damage )
+		a.TakeDamage( self )
 	pass

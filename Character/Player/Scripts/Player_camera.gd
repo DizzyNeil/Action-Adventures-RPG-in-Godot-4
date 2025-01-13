@@ -2,7 +2,7 @@ class_name PlayerCamera extends Camera2D
 
 func _ready() -> void:
 	LevelManager.TileMapBoundsChange.connect( UpdateLimit )
-	UpdateLimit( LevelManager.current_tilemap_bounds )
+	
 	pass
 
 func UpdateLimit( bounds : Array[ Vector2 ] ) -> void:
