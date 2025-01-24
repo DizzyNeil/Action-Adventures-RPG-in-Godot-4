@@ -21,7 +21,7 @@ func _ready() -> void:
 	hitbox.Damaged.connect( _take_damage )
 	update_hp(99)
 
-func  _process(delta: float) -> void:
+func  _process(_delta: float) -> void:
 	
 	#direction.x = Input.get_action_strength("right") - Input.get_action_strength("left")
 	#direction.y = Input.get_action_strength("down") - Input.get_action_strength("up") 
@@ -30,7 +30,7 @@ func  _process(delta: float) -> void:
 		Input.get_axis("up", "down")
 	).normalized()
  
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	move_and_slide()
 
 func set_direction() -> bool:

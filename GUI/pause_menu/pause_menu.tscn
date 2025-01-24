@@ -71,7 +71,6 @@ offset_bottom = 51.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 11
-text = "This red drinks restore your health!"
 autowrap_mode = 2
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Control"]

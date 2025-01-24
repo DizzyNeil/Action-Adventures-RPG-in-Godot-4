@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://035yr10rtn2u"]
+[gd_scene load_steps=11 format=3 uid="uid://035yr10rtn2u"]
 
 [ext_resource type="PackedScene" uid="uid://epeqyojnagrf" path="res://tscn/Grass-01.tscn" id="1_2a6ki"]
 [ext_resource type="Script" path="res://Levels/Scripts/level.gd" id="1_qwq1i"]
@@ -8,6 +8,8 @@
 [ext_resource type="Resource" uid="uid://dnj10n12wv6w3" path="res://Items/gem.tres" id="6_svyid"]
 [ext_resource type="Resource" uid="uid://chdv3vjngyu37" path="res://Items/potion.tres" id="7_unk2e"]
 [ext_resource type="Resource" uid="uid://coyex4lso2d1r" path="res://Items/stone.tres" id="8_i26lo"]
+[ext_resource type="PackedScene" uid="uid://1lou52jsc2eh" path="res://Enemies/Slime/Slime.tscn" id="9_3nrvb"]
+[ext_resource type="Resource" uid="uid://cygk6pdcqqhuj" path="res://Items/apple.tres" id="9_ispjv"]
 
 [node name="01" type="Node2D"]
 script = ExtResource("1_qwq1i")
@@ -40,3 +42,10 @@ item_data = ExtResource("8_i26lo")
 [node name="ItemPickup3" parent="." instance=ExtResource("5_p4vxf")]
 position = Vector2(246, 230)
 item_data = ExtResource("7_unk2e")
+
+[node name="ItemPickup4" parent="." instance=ExtResource("5_p4vxf")]
+position = Vector2(335, 272)
+item_data = ExtResource("9_ispjv")
+
+[node name="slime" parent="." instance=ExtResource("9_3nrvb")]
+position = Vector2(-5, 233)

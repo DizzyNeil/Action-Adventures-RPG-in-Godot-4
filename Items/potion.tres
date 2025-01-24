@@ -8,8 +8,8 @@
 
 [sub_resource type="Resource" id="Resource_m1xyw"]
 script = ExtResource("2_irtgm")
-heal_amount = 1
-sound = ExtResource("3_jifpc")
+heal_amount = 2
+audio = ExtResource("3_jifpc")
 ude_description = ""
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0bhs7"]
