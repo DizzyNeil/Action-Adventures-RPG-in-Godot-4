@@ -17,7 +17,7 @@ var current_save : Dictionary = {
 		pos_y = 0
 	},
 	items = [],
-	presistance = [],
+	presistence = [],
 	quests = [],
 }
 
@@ -75,3 +75,13 @@ func update_scene_path() -> void:
 
 func update_item_data() -> void:
 	current_save.items = PlayerManager.INVENTORY_DATA.get_save_data()
+
+
+func add_presistent_value( value : String ) -> void:
+	if check_presistent_value( value ) == false:
+		current_save.presistence.append( value )
+
+
+func check_presistent_value( value : String ) -> bool:
+	var p = current_save.presistence as Array
+	return p.has( value )

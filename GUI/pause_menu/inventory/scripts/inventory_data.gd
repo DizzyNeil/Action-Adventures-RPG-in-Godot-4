@@ -56,7 +56,7 @@ func get_save_data() -> Array:
 
 ## Convert each inventory item into a dictionary
 func item_to_save( slot : SlotData ) -> Dictionary:
-	var result = { item = " ", quantity = 0 }
+	var result = { item = "", quantity = 0 }
 	if slot != null:
 		result.quantity = slot.quantity
 		if slot.item_data != null:

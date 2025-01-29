@@ -25,7 +25,8 @@ func Enter() -> void:
 	attacking = true
 	
 	await get_tree().create_timer( 0.075 ).timeout
-	hurtbox.monitoring = true
+	if attacking:
+		hurtbox.monitoring = true
 
 ## what happens when the player exit the state?
 func Exit() -> void:
