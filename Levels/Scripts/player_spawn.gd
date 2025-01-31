@@ -1,6 +1,7 @@
 extends Node2D
 
 func _ready() -> void:
+	print("Player has been spawned")
 	visible = false
 	if PlayerManager.player_spawned == false:
 		PlayerManager.set_player_position( global_position )

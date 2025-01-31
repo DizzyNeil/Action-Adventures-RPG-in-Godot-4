@@ -38,8 +38,11 @@ func set_direction( _new_direction : Vector2 ) -> bool:
 		/ TAU * DIR_4.size()
 		))
 	
-	cardinal_direction = _new_direction
-	direction_changed.emit( _new_direction )
+	var new_dir = DIR_4[ direction_id ]
+	if new_dir == cardinal_direction:
+			return false
+	cardinal_direction = new_dir
+	direction_changed.emit( new_dir )
 	sprite_2d.scale.x = -1 if cardinal_direction == Vector2.LEFT else 1
 	return true
 

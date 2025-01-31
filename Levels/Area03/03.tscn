@@ -17,4 +17,4 @@ level = "res://Levels/Area01/01.tscn"
 target_transition_area = "LevelTransition2"
 
 [node name="PlayerSpawn" parent="." instance=ExtResource("2_ct58r")]
-position = Vector2(58, 110)
+position = Vector2(176, 154)
