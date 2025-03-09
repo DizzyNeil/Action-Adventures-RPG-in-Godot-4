@@ -1,0 +1,72 @@
+[gd_scene load_steps=8 format=3 uid="uid://c0b4buaoiuu12"]
+
+[ext_resource type="Script" path="res://GUI/dialog_system/scripts/dialog_system.gd" id="1_0xahj"]
+[ext_resource type="Texture2D" uid="uid://dcvsshw63cje1" path="res://GUI/dialog_system/sprites/text-bubble.png" id="2_uq0tc"]
+[ext_resource type="FontFile" uid="uid://ck1wy3dlf7xbu" path="res://GUI/fonts/Abaddon Light.ttf" id="3_dsw4a"]
+[ext_resource type="FontFile" uid="uid://d1hhoku5xkk2g" path="res://GUI/fonts/Abaddon Bold.ttf" id="4_52bht"]
+
+[sub_resource type="Gradient" id="Gradient_2fbq3"]
+colors = PackedColorArray(1, 1, 1, 0, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_87bxx"]
+gradient = SubResource("Gradient_2fbq3")
+fill_to = Vector2(0, 0.960114)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ub6at"]
+content_margin_left = 14.0
+content_margin_top = 10.0
+content_margin_right = 14.0
+content_margin_bottom = 10.0
+texture = ExtResource("2_uq0tc")
+texture_margin_left = 16.0
+texture_margin_top = 16.0
+texture_margin_right = 16.0
+texture_margin_bottom = 16.0
+
+[node name="DialogSystem" type="CanvasLayer"]
+process_mode = 3
+layer = 0
+script = ExtResource("1_0xahj")
+
+[node name="DialogUI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="DialogUI"]
+modulate = Color(0, 0, 0, 0.458)
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -141.0
+grow_horizontal = 2
+grow_vertical = 0
+texture = SubResource("GradientTexture2D_87bxx")
+
+[node name="PanelContainer" type="PanelContainer" parent="DialogUI"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 226.0
+offset_top = -92.0
+offset_right = -6.0
+offset_bottom = -7.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxTexture_ub6at")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="DialogUI/PanelContainer"]
+layout_mode = 2
+theme_override_colors/default_color = Color(0.439216, 0.396078, 0.321569, 1)
+theme_override_fonts/normal_font = ExtResource("3_dsw4a")
+theme_override_fonts/bold_font = ExtResource("4_52bht")
+bbcode_enabled = true
+text = "EXAMPLE [b]TEXT!![/b]
+[wave]WOW!![/wave] [color=orangered][shake]AWESOME!![/shake]"

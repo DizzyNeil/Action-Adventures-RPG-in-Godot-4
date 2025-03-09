@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=5 format=3 uid="uid://yf2gis6unnmh"]
+
+[ext_resource type="Script" path="res://Items/item_effects/item_effect.gd" id="1_srt7a"]
+[ext_resource type="Script" path="res://Items/scripts/item_data.gd" id="2_21sfo"]
+[ext_resource type="Texture2D" uid="uid://d0j4e35luwmc2" path="res://Items/sprites/items.png" id="3_p8cui"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6n15x"]
+atlas = ExtResource("3_p8cui")
+region = Rect2(224, 0, 32, 32)
+
+[resource]
+script = ExtResource("2_21sfo")
+name = "Dungen Key"
+descriptions = "A device that is used to operate a lock (to lock or unlock it)"
+texture = SubResource("AtlasTexture_6n15x")
+effects = Array[ExtResource("1_srt7a")]([])

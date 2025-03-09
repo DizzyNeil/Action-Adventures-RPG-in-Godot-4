@@ -1,0 +1,3 @@
+[gd_scene format=3 uid="uid://q56g8r2ngak6"]
+
+[node name="NpcBehavior" type="Node2D"]
